@@ -64,7 +64,7 @@ contract Raffle is VRFConsumerBaseV2Plus {
     bytes32 private immutable I_KEYHASH;
     uint256 private immutable I_SUBSCRIPTION_ID;
     uint16 private constant REQUEST_CONFIRMATIONS = 3;
-    uint32 private immutable I_CALLBACK_GAS_LIMIT = 40_000;
+    uint32 private immutable I_CALLBACK_GAS_LIMIT;
     uint32 private constant NUM_WORDS = 1;
 
     /**
@@ -191,5 +191,9 @@ contract Raffle is VRFConsumerBaseV2Plus {
      */
     function getEntranceFee() external view returns (uint256) {
         return I_ENTRANCE_FEE;
+    }
+
+    function getRaffleState() external view returns (RaffleState) {
+        return sRaffleState;
     }
 }
