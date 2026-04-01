@@ -92,7 +92,11 @@ contract Raffle is VRFConsumerBaseV2Plus {
         sRaffleState = RaffleState.OPEN;
     }
 
-    function enterRaffle() external payable {
+    receive() external payable{
+        enterRaffle();
+    }
+
+    function enterRaffle() public payable {
         if (msg.value < I_ENTRANCE_FEE) {
             revert Raffle__SendMoreETHToEnterRaffle();
         }

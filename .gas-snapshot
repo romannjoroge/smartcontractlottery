@@ -1,0 +1,6 @@
+RaffleTests:testCheckUpKeepReturnsFalseIfNotOpen() (gas: 226143)
+RaffleTests:testCheckUpkeepReturnsFalseIfContractHasNoBalance() (gas: 20938)
+RaffleTests:testEnterRaffleFailsIfPlayerSendLessThanEntranceFee() (gas: 11103)
+RaffleTests:testEnterRaffleFailsIfStateNotOpen() (gas: 230992)
+RaffleTests:testPlayerStoredWhenEnterRaffle() (gas: 71739)
+RaffleTests:testRaffleStartsOpen() (gas: 8039)
